@@ -11,6 +11,8 @@ end
 group :production do
 	gem 'pg'
 end
+#Devise para login
+gem 'devise'
 #Bootstrap SASS
 gem 'bootstrap-sass'
 #CoffeeScript para Windows
