@@ -3,10 +3,6 @@ $baseFontFamily: Oswald;
 
 @import 'bootstrap';
 
-
-
-
-
 body{
 	font-family: 'Oswald', sans-serif;
 	padding-top: 70px;
@@ -19,9 +15,12 @@ body{
 .footer{
 
 	margin-top: 50px;
-	color: red;
 
 	a{
 		color: gray;
 	}
+}
+
+.alert-notice{
+	@include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text)
 }

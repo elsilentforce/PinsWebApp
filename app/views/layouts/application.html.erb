@@ -34,7 +34,14 @@
       <!-- Registro -->
       <div class="collapse navbar-collapse" id="navbarRegister">
         <ul class="nav navbar-nav pull-right">
-          <li><%= link_to 'Iniciar sesión', new_user_session_path %></li>
+          <% #Si el usuario no está autenticado mostrar 'Iniciar Sesión', en caso contrario 'Cerrar Sesión' %>
+          <% if user_signed_in? %>   
+            <li><%= link_to 'Perfil', edit_user_registration_path %></li>
+            <li><%= link_to 'Cerrar sesión', destroy_user_session_path, :method => :delete %></li>
+          <% else %>
+            <li><%= link_to 'Iniciar sesión', new_user_session_path %></li>
+          <% end %>
+          </li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.navbar-collapse -->    
@@ -43,11 +50,10 @@
 
 <div class="container">
   <%= render 'layouts/header' %>
-  <% 
-    flash.each do |name, msg|
-      conten_tag(:div, msg, class: "alert alert-#(name)")
-    end
-   %>
+  <% #Muestra mensaje %>
+  <% flash.each do |name, msg| %>
+    <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+  <% end %>
 	<%= yield %>	
   <%= render 'layouts/footer' %>
 </div>

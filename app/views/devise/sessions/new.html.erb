@@ -1,0 +1,17 @@
+<h2>Inicio de Sesión</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= f.input :email %>
+
+  <%= f.input :password, label: "Contraseña" %>
+
+  <% if devise_mapping.rememberable? -%>
+    <%= f.input :remember_me, :as => :boolean, label: "Recuerdame" %>
+  <% end -%>
+
+  <div class="form-actions">
+    <%= f.submit "Iniciar Sesión", :class => "btn btn-primary" %>
+  </div>
+<% end %>
+
+<% # render "devise/shared/links" %>

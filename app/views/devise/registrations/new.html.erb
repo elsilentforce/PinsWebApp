@@ -1,0 +1,19 @@
+<h2>Formulario de Registro</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :name, label: "Nombre de Usuario" %>
+
+  <%= f.input :email %>
+
+  <%= f.input :password, label: "Contraseña" %>
+
+  <%= f.input :remember_me, :as => :boolean, label: "Recuerdame" %>
+
+  <div class="form-action">
+    <%= f.submit "Registrarse", :class => "btn btn-primary" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

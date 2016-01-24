@@ -1,0 +1,30 @@
+<h2>Editar <%= resource_name.to_s.humanize %></h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :name, label: "Nombre de Usuario" %>
+
+  <%= f.input :email %>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <%= f.input :password, label: "Contraseña", hint: "Dejar en blanco si no desea modificarla" %>
+
+  <%= f.input :password_confirmation, label: "Confirmar contraseña" %>
+
+  <%= f.input :current_password, label: "Contraseña actual", hint: "Se necesita la contraseña actual para confirmar los cambios" %>
+
+
+  <div class="form-actions">
+    <%= f.submit "Actualizar Datos", :class => "btn btn-primary" %>
+  </div>
+<% end %>
+
+<h3>Cancelar cuenta</h3>
+
+<p>Desconforme? <%= button_to "Cerrar cuenta", registration_path(resource_name), data: { confirm: "Está seguro?" }, method: :delete %></p>
+
+<%= link_to "Atrás", :back %>

@@ -1,5 +1,11 @@
 <div class="jumbotron">
-	<h1>Página de prueba</h1>
-	<p>Página web creada utilizando el Framework <%= link_to 'Ruby On Rails', 'http://rubyonrails.org/' %></p>
-	<p><%= link_to 'Registrarse', new_user_registration_path, :class=>"btn btn-primary btn-lg"  %></a></p>	
+	<% #Si el usuario no está autenticado mostrar 'Iniciar Sesión', en caso contrario 'Bienvenida' %>
+    <% if user_signed_in? %>
+    	<h1>Bienvenido</h1>
+        <p>Bienvenido al sistema creado con Ruby on Rails</p>
+    <% else %>
+		<h1>Página de prueba</h1>
+		<p>Página web creada utilizando el Framework <%= link_to 'Ruby On Rails', 'http://rubyonrails.org/' %></p>
+		<p><%= link_to 'Registrarse', new_user_registration_path, :class=>"btn btn-primary btn-lg"  %></a></p>
+	<% end %>
 </div>
