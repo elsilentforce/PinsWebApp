@@ -24,3 +24,7 @@ body{
 .alert-notice{
 	@include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text)
 }
+
+.alert-alert{
+	@include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text)
+}
