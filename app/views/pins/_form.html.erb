@@ -1,0 +1,9 @@
+<%= simple_form_for(@pin, html:{class: "form-horizontal"}) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :description, label: "Descripción" %>
+
+  <div class="actions">
+    <%= f.button :submit, :class => "btn btn-primary", value: "Crear Recurso" %>
+  </div>
+<% end %>

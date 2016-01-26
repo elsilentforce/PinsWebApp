@@ -14,7 +14,7 @@ en:
       last_attempt: "You have one more attempt before your account is locked."
       not_found_in_database: "Invalid %{authentication_keys} or password."
       timeout: "Your session expired. Please sign in again to continue."
-      unauthenticated: "You need to sign in or sign up before continuing."
+      unauthenticated: "Necesita autenticarse antes de continuar."
       unconfirmed: "You have to confirm your email address before continuing."
     mailer:
       confirmation_instructions:
@@ -44,7 +44,7 @@ en:
       updated: "Su cuenta ha sido actualizada satisfactoriamente."
     sessions:
       signed_in: "Ha iniciado sesión."
-      signed_out: "Ha cerradoo sesión."
+      signed_out: "Ha cerrado sesión."
       already_signed_out: "Cierre de sesión satisfactorio."
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
