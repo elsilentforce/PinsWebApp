@@ -19,6 +19,10 @@ gem 'bootstrap-sass'
 gem 'coffee-script-source', '1.8.0'
 #Simple Form para formularios
 gem 'simple_form'
+#Gema para atributos protegidos
+gem 'protected_attributes'
+#Paperclip para carga de imagenes.
+gem "paperclip", "~> 4.3"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
