@@ -1,3 +1,12 @@
 Desarrollo de prueba utilizando Ruby On Rails.
 
-Aplicación web que permite la creación de usuarios y carga de recursos de imágen una vez autenticados, cuenta con el uso de las gemas: Devise, Paperclip, Bootstrap, simple form, protected atrributes así como el uso del servicio Amazon S3.
+Aplicación web que permite la creación de usuarios y carga de recursos de imágen una vez autenticados.
+[Gemas utilizadas]
+* Devise
+* Paperclip
+* Bootstrap
+* simple_form
+* protected_atrributes
+
+[Servicios utilizados]
+* Amazon S3.
