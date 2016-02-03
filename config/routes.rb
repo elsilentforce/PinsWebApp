@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/show'
+
   resources :pins
 
   devise_for :users
@@ -8,7 +10,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'sitio#index'
+  root 'pins#index'
+  get 'users/:id' => 'users#show', as: :user
   get 'about' => 'sitio#about'
 
   # Example of regular route:

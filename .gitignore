@@ -22,3 +22,6 @@ doc/
 
 #Ignorando directorio System
 /public/system
+
+#Ignorando imágenes de prueba
+/recursosTest

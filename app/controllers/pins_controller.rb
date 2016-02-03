@@ -5,7 +5,8 @@ class PinsController < ApplicationController
   respond_to :html
 
   def index
-    @pins = Pin.all
+    @pins = Pin.order("created_at desc").page(params[:page]).per_page(5)
+    #@pins = Pin.all.paginate(page: params[:page], per_page: 10)
     respond_with(@pins)
   end
 
@@ -43,6 +44,6 @@ class PinsController < ApplicationController
     end
 
     def pin_params
-      params.require(:pin).permit(:description, :image)
+      params.require(:pin).permit(:description, :image, :image_remote_url)
     end
 end

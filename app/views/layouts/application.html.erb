@@ -34,7 +34,8 @@
       <div class="collapse navbar-collapse" id="navbarRegister">
         <ul class="nav navbar-nav pull-right">
           <% #Si el usuario no está autenticado mostrar 'Iniciar Sesión', en caso contrario 'Cerrar Sesión' %>
-          <% if user_signed_in? %>   
+          <% if user_signed_in? %>
+            <li><%= link_to 'Crear Recurso', new_pin_path %></li>
             <li><%= link_to 'Perfil', edit_user_registration_path %></li>
             <li><%= link_to 'Cerrar sesión', destroy_user_session_path, :method => :delete %></li>
           <% else %>

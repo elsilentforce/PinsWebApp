@@ -1,23 +1,16 @@
-<h1>Lista de Recursos</h1>
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Descripción</th>
-      <th>Imágen</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render @pins %>
-  </tbody>
-</table>
+<% unless user_signed_in? %>
+<%= render 'sitio/index' %>
+<% end %>
+<h1>Recursos Disponibles</h1>
 
 
-<%= link_to 'Nuevo Recurso', new_pin_path %>
+<div id="pins">
+  <%= render @pins %>
+</div>
 
 
+<br/>
 
-
+<p>
+	<%= will_paginate @posts, previous_label: t("Anterior"), next_label: t('Siguiente') %>
+</p>

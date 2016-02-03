@@ -1,0 +1,10 @@
+<h1>Recursos de <%= @user.name %></h1>
+<div id="pins">
+  <%= render @pins %>
+</div>
+
+<br/>
+
+<p>
+	<%= will_paginate @pins, previous_label: t("Anterior"), next_label: t('Siguiente') %>
+</p>

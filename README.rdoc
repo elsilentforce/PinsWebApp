@@ -1,4 +1,4 @@
-Desarrollo de prueba utilizando Ruby On Rails.
+<b>Administración de recursos de usuario</b>
 
 Aplicación web que permite la creación de usuarios y carga de recursos de imágen una vez autenticados.
 
@@ -8,6 +8,3 @@ Aplicación web que permite la creación de usuarios y carga de recursos de imá
 * Bootstrap
 * simple_form
 * protected_atrributes
-
-<b>Servicios utilizados</b>
-* Amazon S3.

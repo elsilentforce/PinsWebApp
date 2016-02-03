@@ -22,7 +22,13 @@ gem 'simple_form'
 #Gema para atributos protegidos
 gem 'protected_attributes'
 #Paperclip para carga de imagenes.
-gem "paperclip", "~> 4.3"
+gem 'paperclip', '~> 4.3'
+#Faker para poblado de base de datos
+gem 'faker'
+#Will Paginate para paginación de elementos
+gem 'will_paginate', '~> 3.0.6'
+#Estilo bootstrap para will_paginate
+gem 'bootstrap-will_paginate'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
