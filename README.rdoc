@@ -1,6 +1,7 @@
 <b>Administración de recursos de usuario</b>
 
-Aplicación web que permite la creación de usuarios y carga de recursos de imágen una vez autenticados.
+Aplicación web que permite la creación de usuarios y carga de imágenes asociadas a los mismos una vez autenticados.
+Además de ello despliega todos los recursos cargados en formato de galería paginada.
 
 <b>Gemas utilizadas</b>
 * Devise
@@ -8,3 +9,8 @@ Aplicación web que permite la creación de usuarios y carga de recursos de imá
 * Bootstrap
 * simple_form
 * protected_atrributes
+* faker
+* will_paginate
+
+<b>Librerías Javascript utilizadas</b>
+* masonry
